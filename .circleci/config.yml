@@ -18,7 +18,7 @@ jobs:
           pkg-manager: pipenv
       - run:
           name: Run tests
-          command: pipenv run python manage.py test # alternatively run `python -m pytest` if you are running vanilla pytest
+          command: pipenv run python manage.py test && python hgp.py # alternatively run `python -m pytest` if you are running vanilla pytest
       - store_test_results:
           path: test-results
       - store_artifacts:
